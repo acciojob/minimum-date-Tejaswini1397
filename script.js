@@ -1,5 +1,11 @@
 function minDate(dates) {
   //write you code here
+	const dateObjects = dates.map(dateString => new Date(dateString));
+
+    // Find the minimum date using Math.min and spread syntax
+    const minimumDate = new Date(Math.min(...dateObjects));
+
+    return minimumDate.toLocaleDateString();
 }
 
 // Do not change the code
